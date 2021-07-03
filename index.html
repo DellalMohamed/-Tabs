@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>javascript tabs</title>
+</head>
+<body>
+    <div class="container">
+        <div class="icon ">
+            <div class="iconBx" data-id="content1">
+                <img class=""  src="img/images.png" alt="">
+            </div>
+            <div class="iconBx" data-id="content2">
+                <img  src="img/téléchargement (1).png" alt="">
+            </div>
+            <div class="iconBx" data-id="content3">
+                <img   src="img/images.jpg" alt="">
+            </div>
+            <div class="iconBx" data-id="content4">
+                <img   src="img/images (1).png" alt="">
+            </div>
+        </div>
+        <div class="content">
+            <div class="contentBx " id="content1">
+                <div>
+                    <div class="text">
+                        <h2>Google Content</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum, praesentium enim eos nostrum temporibus quo totam iusto provident fuga odio, ea dolorum odit natus in commodi vitae similique sed. Optio? adipisicing elit. Cum, praesentium enim eos nostrum temporibus quo totam iusto provident fuga odio, ea dolorum odit natus in commodi vitae similique sed. Optio?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contentBx" id="content2">
+                <div>
+                    <div class="text">
+                        <h2>Facebook Content</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum, praesentium enim eos nostrum temporibus quo totam iusto provident fuga odio, ea dolorum odit natus in commodi vitae similique sed. Optio? adipisicing elit. Cum, praesentium enim eos nostrum temporibus quo totam iusto provident fuga odio, ea dolorum odit natus in commodi vitae similique sed. Optio?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contentBx" id="content3">
+                <div>
+                    <div class="text">
+                        <h2>Twitter Content</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum, praesentium enim eos nostrum temporibus quo totam iusto provident fuga odio, ea dolorum  adipisicing elit. Cum, praesentium enim eos nostrum temporibus quo totam iusto provident fuga odio, ea dolorum  adipisicing elit. Cum, praesentium enim eos nostrum temporibus quo totam iusto provident fuga odio, ea dolorum odit natus in commodi vitae similique sed. Optio? odit natus in commodi vitae similique sed. Optio?odit natus in commodi vitae similique sed. Optio?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contentBx" id="content4">
+                <div>
+                    <div class="text">
+                        <h2>Yahoo Content</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum, praesentium enim eos nostrum temporibus quo totam iusto provident fuga odio, ea dolorum odit natus in commodi vitae similique sed. Optio?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var iconBx = document.querySelectorAll('.iconBx');
+        var contentBx = document.querySelectorAll('.contentBx');
+        for(var i=0;i<iconBx.length;i++){
+            iconBx[i].addEventListener('mouseover',function(){
+            for (var i=0; i<contentBx.length; i++){
+            contentBx[i].className ='contentBx';
+        }
+        document.getElementById(this.dataset.id).className= 'iconBx active';
+        for(var i=0; i<iconBx.length;i++){
+            iconBx[i].className='iconBx';
+            this.className='iconBx active'
+        }    
+    })
+    }
+        
+    </script>
+</body>
+</html>
